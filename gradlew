@@ -330,11 +330,8 @@ jvm_args_array=()
 #
 # We also need to add a newline at the end of the file in case the file
 # does not end with a newline. This is to avoid the last line being
-# ignored.
-for line in $(printf '%s\n' "$DEFAULT_JVM_OPTS" | tr '\n' ' '); do
-    jvm_args_array+=("$line")
-done
-
+- # ignored.
+#
 # We do not want to iterate over the array in a 'for' loop because that
 # would be interpreted by the shell. We want to pass the array as-is to
 - # the 'java' command.
