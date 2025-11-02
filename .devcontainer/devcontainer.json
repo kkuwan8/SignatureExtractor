@@ -1,0 +1,12 @@
+{
+  "name": "Android NDK Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/android-sdk:1": {
+      "ndk": true,
+      "cmake": true,
+      "buildToolsVersion": "34.0.0"
+    }
+  },
+  "postCreateCommand": "yes | sdkmanager --licenses && sdkmanager --update"
+}
